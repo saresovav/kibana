@@ -1,4 +1,4 @@
-#!/bin/sh
+${DIR}/node!/bin/sh
 SCRIPT=$0
 
 # SCRIPT may be an arbitrarily deep series of symlinks. Loop until we have the concrete path.
@@ -14,7 +14,7 @@ while [ -h "$SCRIPT" ] ; do
 done
 
 DIR="$(dirname "${SCRIPT}")/.."
-NODE="${DIR}/node/bin/node"
+NODE="/home/saresovav/.nvm/versions/node/v10.19.0/bin/node"
 test -x "$NODE"
 if [ ! -x "$NODE" ]; then
   echo "unable to find usable node.js executable."
